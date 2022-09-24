@@ -90,7 +90,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 46  | [Why do you need web storage](#why-do-you-need-web-storage)                                                                                                       |
 | 47  | [How do you check web storage browser support](#how-do-you-check-web-storage-browser-support)                                                                     |
 | 48  | [How do you check web workers browser support](#how-do-you-check-web-workers-browser-support)                                                                     |
-| 49  | [Give an example of web worker](#give-an-example-of-web-worker)                                                                                                   |
+| 49  | [Give an example of a web worker](#give-an-example-of-a-web-worker)                                                                                                   |
 | 50  | [What are the restrictions of web workers on DOM](#what-are-the-restrictions-of-web-workers-on-dom)                                                               |
 | 51  | [What is a promise](#what-is-a-promise)                                                                                                                           |
 | 52  | [Why do you need a promise](#why-do-you-need-a-promise)                                                                                                           |
@@ -98,20 +98,20 @@ You can download the PDF and Epub version of this repository from the latest run
 | 54  | [What is a callback function](#what-is-a-callback-function)                                                                                                       |
 | 55  | [Why do we need callbacks](#why-do-we-need-callbacks)                                                                                                             |
 | 56  | [What is a callback hell](#what-is-a-callback-hell)                                                                                                               |
-| 57  | [What is server-sent events](#what-is-server-sent-events)                                                                                                         |
+| 57  | [What are server-sent events](#what-are-server-sent-events)                                                                                                         |
 | 58  | [How do you receive server-sent event notifications](#how-do-you-receive-server-sent-event-notifications)                                                         |
 | 59  | [How do you check browser support for server-sent events](#how-do-you-check-browser-support-for-server-sent-events)                                               |
 | 60  | [What are the events available for server sent events](#what-are-the-events-available-for-server-sent-events)                                                     |
 | 61  | [What are the main rules of promise](#what-are-the-main-rules-of-promise)                                                                                         |
 | 62  | [What is callback in callback](#what-is-callback-in-callback)                                                                                                     |
 | 63  | [What is promise chaining](#what-is-promise-chaining)                                                                                                             |
-| 64  | [What is promise.all](#what-is-promise.all)                                                                                                                       |
-| 65  | [What is the purpose of race method in promise](#what-is-the-purpose-of-race-method-in-promise)                                                                   |
+| 64  | [What is promise.all](#what-is-promiseall)                                                                                                                       |
+| 65  | [What is the purpose of the race method in promise](#what-is-the-purpose-of-the-race-method-in-promise)                                                                   |
 | 66  | [What is a strict mode in javascript](#what-is-a-strict-mode-in-javascript)                                                                                       |
 | 67  | [Why do you need strict mode](#why-do-you-need-strict-mode)                                                                                                       |
 | 68  | [How do you declare strict mode](#how-do-you-declare-strict-mode)                                                                                                 |
 | 69  | [What is the purpose of double exclamation](#what-is-the-purpose-of-double-exclamation)                                                                           |
-| 70  | [What is the purpose of delete operator](#what-is-the-purpose-of-delete-operator)                                                                                 |
+| 70  | [What is the purpose of the delete operator](#what-is-the-purpose-of-the-delete-operator)                                                                                 |
 | 71  | [What is typeof operator](#what-is-typeof-operator)                                                                                                               |
 | 72  | [What is undefined property](#what-is-undefined-property)                                                                                                         |
 | 73  | [What is null value](#what-is-null-value)                                                                                                                         |
@@ -132,7 +132,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 88  | [How do you submit a form using JavaScript](#how-do-you-submit-a-form-using-javascript)                                                                           |
 | 89  | [How do you find operating system details](#how-do-you-find-operating-system-details)                                                                             |
 | 90  | [What is the difference between document load and DOMContentLoaded events](#what-is-the-difference-between-document-load-and-domcontentloaded-events)             |
-| 91  | [What is the difference between native, host and user objects](#what-is-the-difference-between-native,-host-and-user-objects)                                     |
+| 91  | [What is the difference between native, host and user objects](#what-is-the-difference-between-native-host-and-user-objects)                                     |
 | 92  | [What are the tools or techniques used for debugging JavaScript code](#what-are-the-tools-or-techniques-used-for-debugging-javascript-code)                       |
 | 93  | [What are the pros and cons of promises over callbacks](#what-are-the-pros-and-cons-of-promises-over-callbacks)                                                   |
 | 94  | [What is the difference between an attribute and a property](#what-is-the-difference-between-an-attribute-and-a-property)                                         |
@@ -145,7 +145,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 101 | [Who created javascript](#who-created-javascript)                                                                                                                 |
 | 102 | [What is the use of preventDefault method](#what-is-the-use-of-preventdefault-method)                                                                             |
 | 103 | [What is the use of stopPropagation method](#what-is-the-use-of-stoppropagation-method)                                                                           |
-| 104 | [What are the steps involved in return false](#what-are-the-steps-involved-in-return-false)                                                                       |
+| 104 | [What are the steps involved in return false usage](#what-are-the-steps-involved-in-return-false-usage)                                                                       |
 | 105 | [What is BOM](#what-is-bom)                                                                                                                                       |
 | 106 | [What is the use of setTimeout](#what-is-the-use-of-settimeout)                                                                                                   |
 | 107 | [What is the use of setInterval](#what-is-the-use-of-setinterval)                                                                                                 |
@@ -157,7 +157,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 113 | [What is the purpose JSON stringify](#what-is-the-purpose-json-stringify)                                                                                         |
 | 114 | [How do you parse JSON string](#how-do-you-parse-json-string)                                                                                                     |
 | 115 | [Why do you need JSON](#why-do-you-need-json)                                                                                                                     |
-| 116 | [What are PWAs](#what-are-pwas?)                                                                                                                                  |
+| 116 | [What are PWAs](#what-are-pwas)                                                                                                                                  |
 | 117 | [What is the purpose of clearTimeout method](#what-is-the-purpose-of-cleartimeout-method)                                                                         |
 | 118 | [What is the purpose of clearInterval method](#what-is-the-purpose-of-clearinterval-method)                                                                       |
 | 119 | [How do you redirect new page in javascript](#how-do-you-redirect-new-page-in-javascript)                                                                         |
@@ -177,7 +177,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 133 | [How do you check if a string starts with another string](#how-do-you-check-if-a-string-starts-with-another-string)                                               |
 | 134 | [How do you trim a string in javascript](#how-do-you-trim-a-string-in-javascript)                                                                                 |
 | 135 | [How do you add a key value pair in javascript](#how-do-you-add-a-key-value-pair-in-javascript)                                                                   |
-| 136 | [Is the '!--' notation represents a special operator](#is-the-'!--'-notation-represents-a-special-operator)                                                       |
+| 136 | [Is the '!--' notation represents a special operator](#is-the----notation-represents-a-special-operator)                                                           |
 | 137 | [How do you assign default values to variables](#how-do-you-assign-default-values-to-variables)                                                                   |
 | 138 | [How do you define multiline strings](#how-do-you-define-multiline-strings)                                                                                       |
 | 139 | [What is an app shell model](#what-is-an-app-shell-model)                                                                                                         |
@@ -202,10 +202,10 @@ You can download the PDF and Epub version of this repository from the latest run
 | 158 | [What is a RegExp object](#what-is-a-regexp-object)                                                                                                               |
 | 159 | [How do you search a string for a pattern](#how-do-you-search-a-string-for-a-pattern)                                                                             |
 | 160 | [What is the purpose of exec method](#what-is-the-purpose-of-exec-method)                                                                                         |
-| 161 | [How do you change style of a HTML element](#how-do-you-change-style-of-a-html-element)                                                                           |
-| 162 | [What would be the result of 1+2+'3'](#what-would-be-the-result-of-1+2+'3')                                                                                       |
+| 161 | [How do you change the style of a HTML element](#how-do-you-change-the-style-of-a-html-element)                                                                           |
+| 162 | [What would be the result of 1+2+'3'](#what-would-be-the-result-of-123)                                                                                       |
 | 163 | [What is a debugger statement](#what-is-a-debugger-statement)                                                                                                     |
-| 164 | [What is the purpose of breakpoints in debugging](#what-is-the-purpose-of-breakpoints-indebugging)                                                                |
+| 164 | [What is the purpose of breakpoints in debugging](#what-is-the-purpose-of-breakpoints-in-debugging)                                                                |
 | 165 | [Can I use reserved words as identifiers](#can-i-use-reserved-words-as-identifiers)                                                                               |
 | 166 | [How do you detect a mobile browser](#how-do-you-detect-a-mobile-browser)                                                                                         |
 | 167 | [How do you detect a mobile browser without regexp](#how-do-you-detect-a-mobile-browser-without-regexp)                                                           |
@@ -241,7 +241,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 197 | [What are the differences between freeze and seal methods](#what-are-the-differences-between-freeze-and-seal-methods)                                             |
 | 198 | [How do you determine if an object is sealed or not](#how-do-you-determine-if-an-object-is-sealed-or-not)                                                         |
 | 199 | [How do you get enumerable key and value pairs](#how-do-you-get-enumerable-key-and-value-pairs)                                                                   |
-| 200 | [What is the main difference between Object.values and Object.entries method](#what-is-the-main-difference-between-object.values-and-object.entries-method)       |
+| 200 | [What is the main difference between Object.values and Object.entries method](#what-is-the-main-difference-between-objectvalues-and-objectentries-method)       |
 | 201 | [How can you get the list of keys of any object](#how-can-you-get-the-list-of-keys-of-any-object)                                                                 |
 | 202 | [How do you create an object with prototype](#how-do-you-create-an-object-with-prototype)                                                                         |
 | 203 | [What is a WeakSet](#what-is-a-weakset)                                                                                                                           |
@@ -263,7 +263,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 219 | [What are the advantages of Getters and Setters](#what-are-the-advantages-of-getters-and-setters)                                                                 |
 | 220 | [Can I add getters and setters using defineProperty method](#can-i-add-getters-and-setters-using-defineproperty-method)                                           |
 | 221 | [What is the purpose of switch-case](#what-is-the-purpose-of-switch-case)                                                                                         |
-| 222 | [What are the conventions to be followed for the usage of swtich case](#what-are-the-conventions-to-be-followed-for-the-usage-of-swtich-case)                     |
+| 222 | [What are the conventions to be followed for the usage of switch case](#what-are-the-conventions-to-be-followed-for-the-usage-of-switch-case)                     |
 | 223 | [What are primitive data types](#what-are-primitive-data-types)                                                                                                   |
 | 224 | [What are the different ways to access object properties](#what-are-the-different-ways-to-access-object-properties)                                               |
 | 225 | [What are the function parameter rules](#what-are-the-function-parameter-rules)                                                                                   |
@@ -287,9 +287,9 @@ You can download the PDF and Epub version of this repository from the latest run
 | 243 | [What is the purpose of compareFunction while sorting arrays](#what-is-the-purpose-of-comparefunction-while-sorting-arrays)                                       |
 | 244 | [How do you reversing an array](#how-do-you-reversing-an-array)                                                                                                   |
 | 245 | [How do you find min and max value in an array](#how-do-you-find-min-and-max-value-in-an-array)                                                                   |
-| 246 | [How do you find min and max values without Math functions](#how-do-you-find-min-and-max-values-without--math-functions)                                          |
+| 246 | [How do you find min and max values without Math functions](#how-do-you-find-min-and-max-values-without-math-functions)                                          |
 | 247 | [What is an empty statement and purpose of it](#what-is-an-empty-statement-and-purpose-of-it)                                                                     |
-| 248 | [How do you get meta data of a module](#how-do-you-get-meta-data-of-a-module)                                                                                     |
+| 248 | [How do you get metadata of a module](#how-do-you-get-metadata-of-a-module)                                                                                     |
 | 249 | [What is a comma operator](#what-is-a-comma-operator)                                                                                                             |
 | 250 | [What is the advantage of a comma operator](#what-is-the-advantage-of-a-comma-operator)                                                                           |
 | 251 | [What is typescript](#what-is-typescript)                                                                                                                         |
@@ -364,7 +364,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 320 | [What are typed arrays](#what-are-typed-arrays)                                                                                                                   |
 | 321 | [What are the advantages of module loaders](#what-are-the-advantages-of-module-loaders)                                                                           |
 | 322 | [What is collation](#what-is-collation)                                                                                                                           |
-| 323 | [What is for...of statement](#what-is-for...of-statement)                                                                                                         |
+| 323 | [What is for...of statement](#what-is-forof-statement)                                                                                                         |
 | 324 | [What is the output of below spread operator array](#what-is-the-output-of-below-spread-operator-array)                                                           |
 | 325 | [Is PostMessage secure](#is-postmessage-secure)                                                                                                                   |
 | 326 | [What are the problems with postmessage target origin as wildcard](#what-are-the-problems-with-postmessage-target-origin-as-wildcard)                             |
@@ -429,7 +429,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 385 | [What is minimum timeout throttling](#what-is-minimum-timeout-throttling)                                                                                         |
 | 386 | [How do you implement zero timeout in modern browsers](#how-do-you-implement-zero-timeout-in-modern-browsers)                                                     |
 | 387 | [What are tasks in event loop](#what-are-tasks-in-event-loop)                                                                                                     |
-| 388 | [What are microtasks](#what-are-microtasks)                                                                                                                       |
+| 388 | [What is microtask](#what-is-microtask)                                                                                                                       |
 | 389 | [What are different event loops](#what-are-different-event-loops)                                                                                                 |
 | 390 | [What is the purpose of queueMicrotask](#what-is-the-purpose-of-queuemicrotask)                                                                                   |
 | 391 | [How do you use javascript libraries in typescript file](#how-do-you-use-javascript-libraries-in-typescript-file)                                                 |
@@ -440,7 +440,7 @@ You can download the PDF and Epub version of this repository from the latest run
 | 396 | [What is the difference between shim and polyfill](#what-is-the-difference-between-shim-and-polyfill)                                                             |
 | 397 | [How do you detect primitive or non primitive value type](#how-do-you-detect-primitive-or-non-primitive-value-type)                                               |
 | 398 | [What is babel](#what-is-babel)                                                                                                                                   |
-| 399 | [Is Node.js completely single threaded](#is-node.js-completely-single-threaded)                                                                                   |
+| 399 | [Is Node.js completely single threaded](#is-nodejs-completely-single-threaded)                                                                                   |
 | 400 | [What are the common use cases of observables](#what-are-the-common-use-cases-of-observables)                                                                     |
 | 401 | [What is RxJS](#what-is-rxjs)                                                                                                                                     |
 | 402 | [What is the difference between Function constructor and function declaration](#what-is-the-difference-between-function-constructor-and-function-declaration)     |
@@ -459,18 +459,18 @@ You can download the PDF and Epub version of this repository from the latest run
 | 415 | [What are the differences between spread operator and rest parameter](#what-are-the-differences-between-spread-operator-and-rest-parameter)                       |
 | 416 | [What are the different kinds of generators](#what-are-the-different-kinds-of-generators)                                                                         |
 | 417 | [What are the built-in iterables](#what-are-the-built-in-iterables)                                                                                               |
-| 418 | [What are the differences between for...of and for...in statements](#what-are-the-differences-between-for...of-and-for...in-statements)                           |
+| 418 | [What are the differences between for...of and for...in statements](#what-are-the-differences-between-forof-and-forin-statements)                           |
 | 419 | [How do you define instance and non-instance properties](#how-do-you-define-instance-and-non-instance-properties)                                                 |
-| 420 | [What is the difference between isNaN and Number.isNaN?](#what-is-the-difference-between-isnan-and-number.isnan)                                                  |
+| 420 | [What is the difference between isNaN and Number.isNaN?](#what-is-the-difference-between-isnan-and-numberisnan)                                                  |
 | 421 | [How to invoke an IIFE without any extra brackets?](#how-to-invoke-an-iife-without-any-extra-brackets)                                                            |
 | 422 | [Is that possible to use expressions in switch cases?](#is-that-possible-to-use-expressions-in-switch-cases)                                                      |
 | 423 | [What is the easiest way to ignore promise errors?](#what-is-the-easiest-way-to-ignore-promise-errors)                                                            |
 | 424 | [How do style the console output using CSS?](#how-do-style-the-console-output-using-css)                                                                          |
-| 425 | [What is nullish coalescing operator(??)?](<#what-is-nullish-coalescing-operator-(??)>)                                                                           |
+| 425 | [What is nullish coalescing operator (??)?](#what-is-nullish-coalescing-operator)                                                                           |
 | 426 | [How do you group and nest console output?](#how-do-you-group-and-nest-console-output)                                                                            |
 | 427 | [What is the difference between dense and sparse arrays?](#what-is-the-difference-between-dense-and-sparse-arrays)                                                |
 | 428 | [What are the different ways to create sparse arrays?](#what-are-the-different-ways-to-create-sparse-arrays)                                                      |
-| 429 | [What is the difference between setTimeout, setImmediate and process.nextTick?](#what-is-the-difference-between-set-timeout-,-set-immediate-and-processnext-tick) |
+| 429 | [What is the difference between setTimeout, setImmediate and process.nextTick?](#what-is-the-difference-between-settimeout-setimmediate-and-processnexttick) |
 | 430 | [How do you reverse an array without modifying original array?](#how-do-you-reverse-an-array-without-modifying-original-array)                                    |
 | 431 | [How do you create custom HTML element?](#how-do-you-create-custom-html-element)                                                                                  |
 | 432 | [What is global execution context?](#what-is-global-execution-context)                                                                                            |
@@ -505,7 +505,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
       ```javascript
       var object = {
-           name: "Sudheer"
+           name: "Sudheer",
            age: 34
       };
 
@@ -539,7 +539,7 @@ You can download the PDF and Epub version of this repository from the latest run
       This is equivalent to an instance created with an object create method with a function prototype and then call that function with an instance and parameters as arguments.
 
       ```javascript
-      function func {};
+      function func() {};
 
       new func(x, y, z);
       ```
@@ -1736,7 +1736,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
     **[⬆ Back to Top](#table-of-contents)**
 
-71. ### What is the typeof operator
+71. ### What is typeof operator
 
     You can use the JavaScript typeof operator to find the type of a JavaScript variable. It returns the type of a variable or an expression.
 
@@ -1749,7 +1749,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
 72. ### What is undefined property
 
-    The undefined property indicates that a variable has not been assigned a value, or not declared at all. The type of undefined value is undefined too.
+    The undefined property indicates that a variable has not been assigned a value, or declared but not initialized at all. The type of undefined value is undefined too.
 
     ```javascript
     var user; // Value is undefined, type is undefined
@@ -3296,6 +3296,22 @@ You can download the PDF and Epub version of this repository from the latest run
      console.log(obj.prop); //100
      ```
 
+     Remember freezing is only applied to the top-level properties in objects but not for nested objects. 
+     For example, let's try to freeze user object which has employment details as nested object and observe that details have been changed.
+
+     ```javascript
+     const user = {
+       name: 'John',
+       employment: {
+         department: 'IT'
+       }
+     };
+
+     Object.freeze(user);
+     user.employment.department = 'HR';
+     ```
+
+
      **Note:** It causes a TypeError if the argument passed is not an object.
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -3911,7 +3927,7 @@ You can download the PDF and Epub version of this repository from the latest run
      var msg = "Good morning";
      function greeting() {
        msg = "Good Evening";
-       console.log(msg);
+       console.log(msg); // Good Evening
      }
      greeting();
      ```
@@ -4264,6 +4280,12 @@ You can download the PDF and Epub version of this repository from the latest run
 
 238. ### What is an event queue
 
+      The event queue follows the queue data structure. It stores async callbacks to be added to the call stack. It is also known as the Callback Queue or Macrotask Queue.
+    
+      Whenever the call stack receives an async function, it is moved into the Web API. Based on the function, Web API executes it and awaits the result. Once it is finished, it moves the callback into the event queue (the callback of the promise is moved into the microtask queue).
+    
+      The event queue constantly checks whether or not the call stack is empty. Once the call stack is empty and there is a callback in the event queue, the event queue moves the callback into the call stack. If there is a callback in the microtask queue as well, it is moved first. The microtask queue has a higher priority than the event queue.
+
      **[⬆ Back to Top](#table-of-contents)**
 
 239. ### What is a decorator
@@ -4415,7 +4437,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
      ```javascript
      // Initialize an array a
-     for(int i=0; i < a.length; a[i++] = 0) ;
+     for(let i=0; i < a.length; a[i++] = 0) ;
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -6594,6 +6616,19 @@ You can download the PDF and Epub version of this repository from the latest run
      const multiDimensionalArr = [11, [22, 33], [44, [55, 66, [77, [88]], 99]]];
      const flatArr = flattenMultiArray(multiDimensionalArr); // [11, 22, 33, 44, 55, 66, 77, 88, 99]
      ```
+     
+     Also you can use the `flat` method of Array.
+     
+     ```javascript
+     const arr = [1, [2,3], 4, 5, [6,7]];
+     const fllattenArr = arr.flat(); // [1, 2, 3, 4, 5, 6, 7]
+     
+     // And for multiDemensional arrays
+     const multiDimensionalArr = [11, [22, 33], [44, [55, 66, [77, [88]], 99]]];
+     const oneStepFlat = multiDimensionalArr.flat(1); // [11, 22, 33, 44, [55, 66, [77, [88]], 99]]
+     const towStep = multiDimensionalArr.flat(2); // [11, 22, 33, 44, 55, 66, [77, [88]], 99]
+     const fullyFlatArray = multiDimensionalArr.flat(Infinity); // [11, 22, 33, 44, 55, 66, 77, 88, 99]
+     ```
 
      **[⬆ Back to Top](#table-of-contents)**
 
@@ -7959,7 +7994,7 @@ main();
 The statements order is based on the event loop mechanism. The order of statements follows the below order,
 
 1. At first, the main function is pushed to the stack.
-2. Then the browser pushes the fist statement of the main function( i.e, A's console.log) to the stack, executing and popping out immediately.
+2. Then the browser pushes the first statement of the main function( i.e, A's console.log) to the stack, executing and popping out immediately.
 3. But `setTimeout` statement moved to Browser API to apply the delay for callback.
 4. In the meantime, C's console.log added to stack, executed and popped out.
 5. The callback of `setTimeout` moved from Browser API to message queue.
@@ -8803,7 +8838,7 @@ const sym2 = Symbol("one");
 const sym3 = Symbol.for("two");
 const sym4 = Symbol.for("two");
 
-cnsooe.log(sym1 === sym2, sym3 === sym4);
+console.log(sym1 === sym2, sym3 === sym4);
 ```
 
 - 1: true, true
@@ -8971,13 +9006,13 @@ Using constructors, `new.target` refers to the constructor (points to the class 
 #### 35. What is the output of below code
 
 ```javascript
-const [x, ...y] = [1, 2, 3, 4];
-console.log(x, y);
+const [x, ...y, z] = [1, 2, 3, 4];
+console.log(x, y, z);
 ```
-
-- 1: 1, [2, 3, 4]
-- 2: 1, [2, 3]
-- 3: 1, [2]
+  
+- 1: 1, [2, 3], 4
+- 2: 1, [2, 3, 4], undefined
+- 3: 1, [2], 3
 - 4: SyntaxError
 
 <details><summary><b>Answer</b></summary>
@@ -9729,6 +9764,8 @@ Whereas the second console.log logs 10 by capturing the count variable from oute
 
 </details>
 
+---
+
 **[⬆ Back to Top](#table-of-contents)**
 
 #### 57. What is the output of below code ?
@@ -9758,6 +9795,8 @@ Whereas the second console.log logs 10 by capturing the count variable from oute
 
 ---
 
+**[⬆ Back to Top](#table-of-contents)**
+
 #### 58. What is the output of below code ?
 
 ```javascript
@@ -9783,6 +9822,8 @@ Arrays have their own implementation of `toString` method that returns a comma-s
 </details>
 
 ---
+
+**[⬆ Back to Top](#table-of-contents)**
 
 #### 59. What is the output of below code?
 
@@ -9810,6 +9851,10 @@ Hoisting will move variables and functions to be the top of scope. Even though g
 
 </details>
 
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
 #### 60. What is the output of below code?
 
 ```javascript
@@ -9821,7 +9866,7 @@ console.log("program finished");
 ```
 
 - 1: program finished
-- 2: Cannnot predict the order
+- 2: Cannot predict the order
 - 3: program finished, promise finished
 - 4: promise finished, program finished
 
@@ -9837,7 +9882,130 @@ Even though a promise is resolved immediately, it won't be executed immediately 
 </p>
 
 </details>
+
 ---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 61. What is the output of below code?
+
+```javascript
+console.log('First line')
+['a', 'b', 'c'].forEach((element) => console.log(element))
+console.log('Third line')
+```
+
+- 1: `First line`, then print `a, b, c` in a new line, and finally print `Third line` as next line
+- 2: `First line`, then print `a, b, c` in a first line, and  print `Third line` as next line
+- 3:  Missing semi-colon error
+- 4:  Cannot read properties of undefined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 4
+
+When JavaScript encounters a line break without a semicolon, the JavaScript parser will automatically add a semicolon based on a set of rules called `Automatic Semicolon Insertion` which determines whether line break as end of statement or not to insert semicolon. But it does not assume a semicolon before square brackets [...]. So the first two lines considered as a single statement as below.
+
+```javascript
+console.log('First line')['a', 'b', 'c'].forEach((element) => console.log(element))
+```
+
+Hence, there will be **cannot read properties of undefined** error while applying the array square bracket on log function.
+
+</p>
+
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 62. Write a function that returns a random HEX color
+
+<details><summary><b>Solution 1 (Iterative generation)</b></summary>
+<p>
+
+```javascript
+const HEX_ALPHABET = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+const HEX_PREFIX = "#";
+const HEX_LENGTH = 6;
+
+function generateRandomHex() {
+	let randomHex = "";
+
+	for(let i = 0; i < HEX_LENGTH; i++) {
+		const randomIndex = Math.floor(Math.random() * HEX_ALPHABET.length);
+		randomHex += HEX_ALPHABET[randomIndex];
+	}
+
+	return HEX_PREFIX + randomHex;
+}
+
+```
+
+</p>
+
+</details>
+
+<details><summary><b>Solution 2 (One-liner)</b></summary>
+<p>
+
+```javascript 
+const HEX_PREFIX = "#";
+const HEX_RADIX = 16;
+const HEX_LENGTH = 6;
+
+function generateRandomHex() {
+	return HEX_PREFIX + Math.floor(Math.random() * 0xffffff).toString(HEX_RADIX).padStart(HEX_LENGTH, "0");
+} 
+```
+
+</p>
+
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 63. What is the output of below code?
+
+```javascript
+var of = ['of'];
+for(var of of of) {
+  console.log(of);
+}
+```
+
+- 1:  of
+- 2:  SyntaxError: Unexpected token of
+- 3:  SyntaxError: Identifier 'of' has already been declared
+- 4:  ReferenceError: of is not defined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 1
+
+In JavaScript, `of` is not considered as a reserved keyword. So the variable declaration with `of` is accepted and prints the array value `of` using for..of loop.
+
+But if you use reserved keyword such as `in` then there will be a syntax error saying `SyntaxError: Unexpected token in`,
+
+```javascript
+var in = ['in'];
+for(var in in in) {
+  console.log(in[in]);
+}
+```
+
+</p>
+
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
 
 ## Disclaimer
 
