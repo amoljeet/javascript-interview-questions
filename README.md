@@ -1,22 +1,28 @@
 # JavaScript Interview Questions & Answers
 
-> Click :star:if you like the project. Pull Requests are highly appreciated. Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
+> Click :star:if you like the project and follow [@SudheerJonna](https://twitter.com/SudheerJonna) for more updates. Coding questions available [here](#coding-exercise). PDF and Epub versions available at [actions tab](https://github.com/sudheerj/JavaScript-Interview-Questions/actions).
 
-Go to [Coding Exercise](#coding-exercise) for coding specific questions
+---
 
-## Download PDF/Epub formats
-
-You can download the PDF and Epub version of this repository from the latest run on the [actions tab](https://github.com/sudheerj/JavaScript-Interview-Questions/actions).
+<p align="center">
+  <a href=https://bit.ly/3Pf7EF9>
+    <img src="images/collab/codestudio-logo.svg" alt="Codestudio Logo">
+  </a>
+  <p align="center">
+    Explore the best free <a href=https://bit.ly/3Pf7EF9 target="_blank">resource</a> to learn JavaScript.
+    Build your own projects & earn a free certification in just 25 days.
+  </p>
+</p>
 
 ---
 
 <p align="center">
   <a href=https://zerotomastery.io/?utm_source=github&utm_medium=sponsor&utm_campaign=javascript-interview-questions>
-    <img src=https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:70/https://www.filepicker.io/api/file/AKYtjj5SSGyJuyZrkAB2 alt="ZTM Logo">
+    <img src=https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:70/https://www.filepicker.io/api/file/AKYtjj5SSGyJuyZrkAB2 alt="ZTM Logo" width="100" height="50">
   </a>
   <p align="center">
     <ol>
-    <li>Take this <a href=https://links.zerotomastery.io/jsp_sudheer>JavaScript Projects</a> course to go from a JavaScript beginner to confidently building your own projects</li>
+    <li>Take this <a href=https://links.zerotomastery.io/jsp_sudheer>JavaScript Projects</a> course to go from a JS beginner to confidently building your own projects</li>
     <li>Take this <a href=https://links.zerotomastery.io/mci_sudheer2>coding interview bootcamp</a> if you’re serious about getting hired and don’t have a CS degree</li>
     <li>Take this <a href=https://links.zerotomastery.io/ajs_sudheer>Advanced JavaScript Course</a> to learn advanced JS concepts and become a top JS developer</li>
     </ol>
@@ -30,7 +36,7 @@ You can download the PDF and Epub version of this repository from the latest run
         <a href="https://www.youtube.com/watch?v=Zb4dPi7CANU">
             JavaScript Interview Questions | Top JavaScript Interview Questions and Answers.
             <div>
-                <img src="https://img.youtube.com/vi/Zb4dPi7CANU/0.jpg" width="220" height="150" alt="JavaScript">
+                <img src="https://img.youtube.com/vi/Zb4dPi7CANU/0.jpg" width="150" height="100" alt="JavaScript">
             </div>
         </a>
     </p>
@@ -478,6 +484,9 @@ You can download the PDF and Epub version of this repository from the latest run
 | 434 | [What is debouncing?](#what-is-debouncing)                                                                                                                        |
 | 435 | [What is throttling?](#what-is-throttling)                                                                                                                        |
 | 436 | [What is optional chaining?](#what-is-optional-chaining)                                                                                                          |
+| 437 | [What is an environment record?](#what-is-an-environment-record)                                                                                                          |
+| 438 | [What are hidden classes?](#what-are-hidden-classes)                                                                                                          |
+| 439 | [What is inline caching?](#what-is-inline-caching)                                                                                                          |
 
 1. ### What are the possible ways to create objects in JavaScript
 
@@ -3353,7 +3362,7 @@ You can download the PDF and Epub version of this repository from the latest run
      ```javascript
      function toTitleCase(str) {
        return str.replace(/\w\S*/g, function (txt) {
-         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+         return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
        });
      }
      toTitleCase("good morning john"); // Good Morning John
@@ -3519,7 +3528,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
 192. ### How do you copy properties from one object to other
 
-     You can use the Object.assign() method which is used to copy the values and properties from one or more source objects to a target object. It returns the target object which has properties and values copied from the target object. The syntax would be as below,
+     You can use the Object.assign() method which is used to copy the values and properties from one or more source objects to a target object. It returns the target object which has properties and values copied from the source objects. The syntax would be as below,
 
      ```javascript
      Object.assign(target, ...sources);
@@ -4408,7 +4417,7 @@ You can download the PDF and Epub version of this repository from the latest run
        var min = Infinity;
        while (length--) {
          if (arr[length] < min) {
-           min = arr[len];
+           min = arr[length];
          }
        }
        return min;
@@ -4417,7 +4426,7 @@ You can download the PDF and Epub version of this repository from the latest run
      function findMax(arr) {
        var length = arr.length;
        var max = -Infinity;
-       while (len--) {
+       while (length--) {
          if (arr[length] > max) {
            max = arr[length];
          }
@@ -5037,7 +5046,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
 284. ### How do I modify the url without reloading the page
 
-     The `window.location.url` property will be helpful to modify the url but it reloads the page. HTML5 introduced the `history.pushState()` and `history.replaceState()` methods, which allow you to add and modify history entries, respectively. For example, you can use pushState as below,
+     The `window.location.href` property will be helpful to modify the url but it reloads the page. HTML5 introduced the `history.pushState()` and `history.replaceState()` methods, which allow you to add and modify history entries, respectively. For example, you can use pushState as below,
 
      ```javascript
      window.history.pushState("page2", "Title", "/page2.html");
@@ -5889,10 +5898,10 @@ You can download the PDF and Epub version of this repository from the latest run
 
 333. ### How do you get the status of a checkbox
 
-     You can apply the `checked` property on the selected checkbox in the DOM. If the value is `True` means the checkbox is checked otherwise it is unchecked. For example, the below HTML checkbox element can be access using javascript as below,
+     You can apply the `checked` property on the selected checkbox in the DOM. If the value is `true` means the checkbox is checked otherwise it is unchecked. For example, the below HTML checkbox element can be access using javascript as below,
 
      ```html
-     <input type="checkbox" name="checkboxname" value="Agree" /> Agree the
+     <input type="checkbox" id="checkboxname" value="Agree" /> Agree the
      conditions<br />
      ```
 
@@ -7339,7 +7348,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
      new Myfunc(); // called with new
      Myfunc(); // not called with new
-     Myfunc.call({}); not called with new
+     Myfunc.call({}); // not called with new
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -7458,12 +7467,12 @@ You can download the PDF and Epub version of this repository from the latest run
 
      // key are the property keys
      for (let key in arr) {
-       console.log(key);
+       console.log(key); // 0, 1, 2 & newValue
      }
 
      // value are the property values
      for (let value of arr) {
-       console.log(value);
+       console.log(value); // a, b, c
      }
      ```
 
@@ -7520,9 +7529,9 @@ You can download the PDF and Epub version of this repository from the latest run
      Since both IIFE and void operator discard the result of an expression, you can avoid the extra brackets using `void operator` for IIFE as below,
 
      ```js
-     void (function (dt) {
+     void function (dt) {
        console.log(dt.toLocaleTimeString());
-     })(new Date());
+     }(new Date());
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
@@ -7605,8 +7614,12 @@ You can download the PDF and Epub version of this repository from the latest run
      console.log("Street: Commonwealth");
      console.log("City: Los Angeles");
      console.log("State: California");
-
+     
+     // Close nested group
      console.groupEnd();
+    
+     // Close outer group
+     console.groupEnd()
      ```
 
      You can also use `console.groupCollapsed()` instead of `console.group()` if you want the groups to be collapsed by default.
@@ -7657,8 +7670,13 @@ You can download the PDF and Epub version of this repository from the latest run
         console.log(justiceLeague); // ['Superman', empty, ,'Batman']
         ```
      4. **Increase length property:** Increasing length property of an array
-        `js const justiceLeague = ['Superman', 'Aquaman', 'Batman']; justiceLeague.length = 5; console.log(justiceLeague); // ['Superman', 'Aquaman', 'Batman', empty, empty] `
-        **[⬆ Back to Top](#table-of-contents)**
+        ```js
+        const justiceLeague = ['Superman', 'Aquaman', 'Batman'];
+        justiceLeague.length = 5;
+        console.log(justiceLeague); // ['Superman', 'Aquaman', 'Batman', empty, empty]
+        ```
+	
+     **[⬆ Back to Top](#table-of-contents)**
 
 429. ### What is the difference between setTimeout, setImmediate and process.nextTick?
 
@@ -7892,6 +7910,17 @@ You can download the PDF and Epub version of this repository from the latest run
       console.log(adventurer.someNonExistentMethod?.());
       // expected output: undefined
      ```
+
+437. ### What is an environment record?
+
+     According to ECMAScript specification 262 (9.1):
+
+     >[Environment Record](https://262.ecma-international.org/12.0/#sec-environment-records) is a specification type used to define the association of Identifiers to specific variables and functions, based upon the lexical nesting structure of ECMAScript code.
+     
+     Usually an Environment Record is associated with some specific syntactic structure of ECMAScript code such as a FunctionDeclaration, a BlockStatement, or a Catch clause of a TryStatement.
+     
+     Each time such code is evaluated, a new Environment Record is created to record the identifier bindings that are created by that code.
+     
 
 ### Coding Exercise
 
@@ -8922,7 +8951,19 @@ if (!typeof myString === "number") {
 
 ##### Answer: 4
 
-The return value of `typeof myNumber (OR) typeof myString` is always the truthy value (either "number" or "string"). Since ! operator converts the value to a boolean value, the value of both `!typeof myNumber or !typeof myString` is always false. Hence the if condition fails and control goes to else block.
+The return value of `typeof myNumber` or `typeof myString` is always a truthy value (either "number" or "string"). The ! operator operates on either `typeof myNumber` or `typeof myString`, converting them to boolean values. Since the value of both `!typeof myNumber` and `!typeof myString` is false, the if condition fails, and control goes to else block.
+
+To make the ! operator operate on the equality expression, one needs to add parentheses:
+
+```
+if (!(typeof myNumber === "string"))
+```
+
+Or simply use the inequality operator:
+
+```
+if (typeof myNumber !== "string")
+```
 
 </p>
 
@@ -10001,6 +10042,225 @@ for(var in in in) {
 
 </p>
 
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 64. What is the output of below code?
+
+```javascript
+const numbers = [11, 25, 31, 23, 33, 18, 200];
+numbers.sort();
+console.log(numbers);
+```
+
+- 1:  [11, 18, 23, 25, 31, 33, 200]
+- 2:  [11, 18, 200, 23, 25, 31, 33]
+- 3:  [11, 25, 31, 23, 33, 18, 200]
+- 4:  Cannot sort numbers
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 2
+
+By default, the sort method sorts elements alphabetically. This is because elemented converted to strings and strings compared in UTF-16 code units order. Hence, you will see the above numbers not sorted as expected. In order to sort numerically just supply a comparator function which handles numeric sorts.
+
+```javascript
+const numbers = [11, 25, 31, 23, 33, 18, 200];
+numbers.sort((a, b) => a - b);
+console.log(numbers);
+```
+
+**Note:** Sort() method changes the original array.
+</p>
+
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 65. What is the output order of below code?
+
+```javascript
+setTimeout(() => {console.log('1')}, 0);
+Promise.resolve('hello').then(() => console.log('2'));
+console.log('3');
+```
+
+- 1:  1, 2, 3
+- 2:  1, 3, 2
+- 3:  3, 1, 2
+- 4:  3, 2, 1
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 4
+
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 66. What is the output of below code?
+
+```javascript
+console.log(name);
+console.log(message());
+var name = 'John';
+(function message() {
+   console.log('Hello John: Welcome');
+});
+```
+
+- 1:  John, Hello John: Welcome
+- 2:  undefined, Hello John, Welcome
+- 3:  Reference error: name is not defined, Reference error: message is not defined
+- 4:  undefined, Reference error: message is not defined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 4
+IIFE(Immediately Invoked Function Expression) is just like any other function expression which won't be hoisted. Hence, there will be a reference error for message call.
+The behavior would be the same with below function expression of message1,
+```javascript
+console.log(name);
+console.log(message());
+var name = 'John';
+var message = function () {
+   console.log('Hello John: Welcome');
+});
+```
+</p>
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 67. What is the output of below code?
+
+```javascript
+message()
+
+function message() {
+  console.log("Hello");
+}
+function message() {
+  console.log("Bye");
+}
+```
+
+- 1:  Reference error: message is not defined
+- 2:  Hello
+- 3:  Bye
+- 4:  Compile time error
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 3
+As part of hoisting, initially JavaScript Engine or compiler will store first function in heap memory but later rewrite or replaces with redefined function content.
+</p>
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 68. What is the output of below code?
+
+```javascript
+var currentCity = "NewYork";
+
+var changeCurrentCity = function() {
+  console.log('Current City:', currentCity);
+  var currentCity = "Singapore";
+  console.log('Current City:', currentCity);
+}
+
+changeCurrentCity();
+```
+
+- 1:  NewYork, Singapore
+- 2:  NewYork, NewYork
+- 3:  undefined, Singapore
+- 4:  Singapore, Singapore
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 3
+Due to hositing feature, the variables declared with `var` will have `undefined` value in the creation phase so the outer variable `currentCity` will get same `undefined` value. But after few lines of code JavaScript engine found a new function call(`changeCurrentCity()`) to update the current city with `var` re-declaration. Since each function call will create a new execution context, the same variable will have `undefined` value before the declaration and new value(`Singapore`) after the declarion. Hence, the value `undefined` print first followed by new value `Singapore` in the execution phase.
+</p>
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 69. What is the output of below code in an order?
+
+```javascript
+function second() {
+	var message;
+  console.log(message);
+}
+
+function first() {
+	var message="first";
+  second();
+  console.log(message);
+}
+
+var message = "default";
+first();
+console.log(message);
+```
+
+- 1:  undefined, first, default
+- 2:  default, default, default
+- 3:  first, first, default
+- 4:  undefined, undefined, undefined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 1
+Each context(global or functional) has it's own variable environment and the callstack of variables in a LIFO order. So you can see the message variable value from second, first functions in an order followed by global context message variable value at the end.
+</p>
+</details>
+
+---
+
+**[⬆ Back to Top](#table-of-contents)**
+
+#### 70. What is the output of below code?
+
+```javascript
+var expressionOne = function functionOne() {
+  console.log("functionOne");
+}
+functionOne();
+```
+
+- 1:  functionOne is not defined
+- 2:  functionOne
+- 3:  console.log("functionOne")
+- 4:  undefined
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+##### Answer: 1
+The function call `functionOne` is not going to be part of scope chain and it has it's own execution context with the enclosed variable environment. i.e, It won't be accessed from global context. Hence, there will be an error while invoking the function as `functionOne is not defined`.
+</p>
 </details>
 
 ---
